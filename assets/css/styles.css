@@ -32,16 +32,27 @@ header {
 }
 .logo {
     max-width: 97px;
+    width: 100%;
     max-height: 30px;
+    display: flex;
+    gap: 38px;
+    align-items: center;
 }
 .header-navbar {
     max-width: 470px;
+    width: 100%;
     max-height: 30px;
     display: flex;
-    gap: 36px;
+    justify-content: space-between;   
     align-items: center;
 }
-
+.menu {
+    max-width: 29px;
+    width: 100%;
+    max-height: 22px;
+    height: 22px;
+    display: none;
+}
 .info {
     max-width: 167px;
     max-height: 30px;
@@ -71,9 +82,11 @@ header {
     background: #dcdcdcdc;
     display: flex;
     align-items: center;
+    margin: auto;
 }
 .content {
     max-width: 632px;
+    width: 100%;
     max-height: 385px;
     height: 385px;
     display: flex;
@@ -84,10 +97,12 @@ header {
     display: flex;
     flex-direction: row;
     max-width: 632px;
+    width: 100%;
     gap: 10px;
 }   
 .content-text-1 {
     max-width: 75px;
+    width: 100%;
 }
 
 
@@ -95,6 +110,7 @@ header {
 .content h1 {
 
     max-width: 632px;
+    width: 100%;
     max-height: 122px;
     height: 122px;
     font-style: normal;
@@ -107,6 +123,7 @@ header {
 }
 .content-text-1 h2 {
     max-width: 252px;
+    width: 100%;
     max-height: 50px;
     height: 50px;
     font-family: 'Montserrat';
@@ -120,6 +137,7 @@ header {
 
 .content-text-2 h2 {
     max-width: 252px;
+    width: 100%;
     max-height: 50px;
     height: 50px;
     font-weight: 400;
@@ -128,8 +146,8 @@ header {
     color: #2B3541;
 }
 .content-text-2 h3 {
-
     max-width: 297px;
+    width: 100%;
     max-height: 49px;
     height: 49px;
     font-family: 'Montserrat';
@@ -148,6 +166,7 @@ header {
     padding: 20px 30px;
     gap: 10px;
     max-width: 252px;
+    width: 100%;
     max-height: 64px;
     height: 64px;
     background: #FBF138;
@@ -163,5 +182,82 @@ header {
     text-transform: uppercase;
     color: #2B3541;
 }
+.photo {
+    
+    position: absolute;
+    width: 996px;
+    height: 852px;
+    position: absolute;
+    left: 719px;
+    top: 148px;
+    background: url(../img/girl.png);
+    background-repeat: no-repeat;
+}
 
+.shade {
+        /* Rectangle 141 */
 
+    position: absolute;
+    width: 464px;
+    height: 850px;
+    left: 56%;
+    top: 109px;
+    background: linear-gradient(90deg, #FBF138 0%, rgba(253, 249, 182, 0.45) 145.23%);
+    opacity: 0.2;
+}
+.arrow {
+    max-width: 52px;
+    width: 100%;
+    max-height: 55px;
+    height: 55px;
+    position: absolute;
+    bottom: 0;
+}
+
+.schedule {
+    max-width: 1143px;
+    max-height: 841px;
+    height: 841px;
+    margin: auto;
+    background: #FBF138;
+    margin-top: 100px;
+}
+.schedule-content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.schedule-content h1 {
+    max-width: 356px;
+    max-height: 100px;
+    height: 100px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 125%;
+    color: #2B3541;
+}
+.schedule-content h2 {
+    max-width: 185px;
+    max-height: 35px;
+    height: 35px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 125%;
+    color: #2B3541;
+}
+
+@media only screen and (max-width: 768px){
+    .logo {
+        max-width: 164px;
+    }
+    .header-navbar {
+        display: none;
+    }
+    .menu {
+        display: block;
+    }
+}
