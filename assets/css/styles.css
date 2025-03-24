@@ -251,6 +251,16 @@ header {
     color: #2B3541;
 }
 
+.schedule-grid {
+    margin-top: 35px;
+    max-width: 1143px;
+    max-height: 799px;
+    height: 799px;
+    background: #2B3541;
+}
+
+
+
 @media only screen and (max-width: 768px){
     .logo {
         max-width: 164px;
