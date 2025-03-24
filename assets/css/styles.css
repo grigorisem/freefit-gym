@@ -12,7 +12,7 @@ body {
     margin: auto;
 }
 header {
-    max-width: 1143px;
+    max-width: 1326px;
     width: 100%;
     max-height: 30px;
     height: auto;
@@ -28,7 +28,6 @@ header {
     display: flex;
     justify-content: space-between; 
     align-items: center;  
-    justify-self: center; 
 }
 .logo {
     max-width: 97px;
@@ -183,24 +182,26 @@ header {
     color: #2B3541;
 }
 .photo {
-    
-    position: absolute;
-    width: 996px;
+    width: 100%;
+    max-width: 1326px;
+    position: relative;
+    z-index: -1;
     height: 852px;
-    position: absolute;
-    left: 719px;
-    top: 148px;
-    background: url(../img/girl.png);
-    background-repeat: no-repeat;
 }
 
-.shade {
-        /* Rectangle 141 */
+.photo img {
+    position: absolute;
+    left: -42%;
+    top: 5%;
+    width: auto;
+}
 
+
+.shade {
     position: absolute;
     width: 464px;
     height: 850px;
-    left: 56%;
+    left: 1066px;
     top: 109px;
     background: linear-gradient(90deg, #FBF138 0%, rgba(253, 249, 182, 0.45) 145.23%);
     opacity: 0.2;
