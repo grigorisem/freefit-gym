@@ -224,8 +224,12 @@ header {
     margin-top: 100px;
 }
 .schedule-content {
+    max-width: 1143px;
+    max-height: 100px;
+    height: 100px;
     display: flex;
     justify-content: space-between;
+    margin: 0;
 }
 
 .schedule-content h1 {
@@ -238,6 +242,7 @@ header {
     font-size: 40px;
     line-height: 125%;
     color: #2B3541;
+    margin: 0;
 }
 .schedule-content h2 {
     max-width: 185px;
@@ -249,15 +254,38 @@ header {
     font-size: 28px;
     line-height: 125%;
     color: #2B3541;
+    margin: 0;
 }
 
 .schedule-grid {
-    margin-top: 35px;
+    margin-top: 38px;
     max-width: 1143px;
     max-height: 799px;
-    height: 799px;
+    height: 703px;
     background: #2B3541;
 }
+
+.mailing {
+    max-width: 1920px;
+    width: 100%;
+    max-height: 348px;
+    height: 348px;
+    margin-top: 162px;
+    background: #F3F3F3;
+}
+
+.mailing-inner {
+    max-width: 1920px;
+    width: 100%;
+    max-height: 348px;
+    height: 348px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+
 
 
 
