@@ -408,6 +408,15 @@ form {
     max-height: 513px;
     display: flex;
     justify-content: space-between;
+    flex-direction: column;
+}
+.about-us-inner-2 {
+    max-width: 1142px;
+    width: 100%;
+    max-height: 513px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
 }
 .about-us-company {
     max-width: 483px;
@@ -464,10 +473,104 @@ form {
 }
 
 
+.advantages {
+    max-width: 1142px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
 
+.advantages-1 h1, .advantages-2  h1, .advantages-3 h1, .advantages-4  h1 {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 125%;
+    color: #2B3541;
+}
+.advantages-1 h2, .advantages-2  h2, .advantages-3 h2, .advantages-4  h2 {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 150%;
+    color: #2B3541;
+    opacity: 0.6;
+}
+.advantages-1, .advantages-2, .advantages-3, .advantages-4 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
 
-
-
+.advantages-1 {
+    max-width: 231px;
+    width: 100%;
+    max-height: 97px;
+    height: 97px;
+}
+.advantages-2 {
+    max-width: 284px;
+    width: 100%;
+    max-height: 97px;
+    height: 97px;
+}
+.advantages-3 {
+    max-width: 221px;
+    width: 100%;
+    max-height: 97px;
+    height: 97px;
+}
+.advantages-4 {
+    max-width: 204px;
+    width: 100%;
+    max-height: 97px;
+    height: 97px;
+}
+footer {
+    width: 100%;
+    max-height: 149px;
+    height: 149px;
+    margin-top: 170px;
+    background-color: #F3F3F3;
+    display: flex;
+}
+.footer-inner {
+    max-width: 1141px;
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+}
+.footer-menu {
+    max-width: 462px;
+    width: 100%;
+    max-height: 21px;
+    height: 21px;
+    display: flex;
+    justify-content: space-between;
+}
+.social {
+    max-width: 158px;
+    width: 100%;
+    max-height: 25px;
+    height: 25px;
+    position: relative;
+}
+.eclipse {
+    width: 25px;
+    height: 25px;
+    background: #FBF138;
+    box-shadow: 0px 13px 24px rgba(251, 241, 56, 0.3);
+    border-radius: 50%;
+    z-index: -1;    
+    position: absolute;
+    left: -12px;
+    top: 50%;
+    transform: translateY(-50%);
+}
 @media only screen and (max-width: 768px){
     .logo {
         max-width: 164px;
