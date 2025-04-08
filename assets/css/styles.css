@@ -11,6 +11,7 @@ body {
     width: 100%;
     height: 100%;
     margin: auto;
+    font-size: 20px;
 }
 header {
     max-width: 1326px;
@@ -61,6 +62,16 @@ header {
     position: relative;
     z-index: 1;
 }
+.info h1 {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: clamp(14px, 4vw, 16px);
+    line-height: 150%;
+    color: #2B3541;
+}
+
+
 .eclipse {
     width: 25px;
     height: 25px;
@@ -114,7 +125,7 @@ header {
     height: 122px;
     font-style: normal;
     font-weight: 700;
-    font-size: 36px; /* 48px? */
+    font-size: clamp(24.69px, 2vw, 36px);
     line-height: 125%;
     letter-spacing: 0.03em;
     text-transform: uppercase;
@@ -128,11 +139,18 @@ header {
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 400;
-    font-size: 40px;
+    font-size: clamp(26px, 2vw, 40px);
     line-height: 125%;
     color: #2B3541;
 }
 
+.content-text-2 {
+    max-height: 223px;
+    height: 223px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
 
 .content-text-2 h2 {
     max-width: 252px;
@@ -140,7 +158,7 @@ header {
     max-height: 50px;
     height: 50px;
     font-weight: 400;
-    font-size: 40px;
+    font-size: clamp(26px, 2vw, 40px);
     line-height: 125%;
     color: #2B3541;
 }
@@ -152,7 +170,7 @@ header {
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 400;
-    font-size: 18px;
+    font-size: clamp(16px, 1vw, 18px);
     line-height: 150%;
     color: #2B3541;
 }
@@ -346,7 +364,7 @@ header {
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 700;
-    font-size: 40px;
+    font-size: clamp(26px, 2vw, 40px);
     line-height: 49px;
     text-align: center;
     color: #2B3541;
@@ -631,6 +649,10 @@ footer {
 @media only screen and (max-width: 360px){
     .trainer {
         display: none;
+    }
+    .mailing-inner h1 {
+        max-height: 64px;
+        height: 64px;
     }
 }
 
