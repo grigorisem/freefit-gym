@@ -93,6 +93,7 @@ header {
     display: flex;
     align-items: center;
     margin: auto;
+    position: relative;
 }
 .content {
     max-width: 632px;
@@ -146,10 +147,8 @@ header {
 
 .content-text-2 {
     max-height: 223px;
-    height: 223px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
 }
 
 .content-text-2 h2 {
@@ -176,7 +175,7 @@ header {
 }
 
 
-.content-text-2 button {
+.content-button {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -192,7 +191,8 @@ header {
     align-items: center;
     transition: 0.2s;
 }
-.content-text-2 button:hover {
+
+.content-button:hover {
     transform: translateY(-2px);
 }
 .content button h4 {
@@ -217,22 +217,22 @@ header {
 
 .photo img {
     position: absolute;
-    left: -42%;
-    top: 5%;
     width: 100%;
     height: 100%;
     display: block;
+    object-fit: contain;
 }
 
 
-.shade {
+.photo-shadow {
     position: absolute;
-    width: 464px;
-    height: 850px;
-    left: 1066px;
-    top: 109px;
-    background: linear-gradient(90deg, #FBF138 0%, rgba(253, 249, 182, 0.45) 145.23%);
-    opacity: 0.2;
+    top: 0;
+    left: 25%;
+    width: 50%;
+    height: 84%;
+    background: linear-gradient(180deg, #FBF138 0%, rgba(253, 249, 182, 0.45) 100%);
+    opacity: 0.3;
+    pointer-events: none;
 }
 .arrow {
     max-width: 52px;
@@ -523,7 +523,7 @@ form {
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 700;
-    font-size: 18px;
+    font-size: clamp(15px, 2vw, 18px);
     line-height: 125%;
     color: #2B3541;
 }
@@ -531,7 +531,7 @@ form {
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 400;
-    font-size: 18px;
+    font-size: clamp(15px, 2vw, 18px);
     line-height: 150%;
     color: #2B3541;
     opacity: 0.6;
@@ -611,14 +611,19 @@ footer {
     transform: translateY(-50%);
 }
 @media only screen and (max-width: 768px){
-    .logo {
-        max-width: 164px;
-    }
     .header-navbar {
         display: none;
     }
     .menu {
         display: block;
+    }
+    .arrow {
+        display: none;
+    }
+    .screen {
+        margin-top: 53px;        
+        max-height: 312px;
+        height: 312px;
     }
     .about-us-company {
         height: 330px;
@@ -635,7 +640,6 @@ footer {
     .about-us-inner-2 {
     }
     .advantages {
-        flex-wrap: wrap;
         gap: 20px 0;
         max-width: 607px;   
         max-height: 209px;
@@ -653,8 +657,32 @@ footer {
     .footer-menu, .social {
         display: none;
     }
-    .logo {
-        padding: 15px;
+    .footer-inner {
+        width: calc(100% - 15px);
+    }
+    .screen{
+        width: calc(100% - 15px);
+    }
+    .about-us {
+        width: calc(100% - 15px);
+    }
+    header {
+        width: calc(100% - 15px);
+    }
+    .advantages {
+        padding: 15px 0 0 0;
+    }
+    .schedule-container-wrapper {
+        grid-template-columns: repeat(2, 1fr); 
+    }
+    .pos-1,
+    .pos-2,
+    .pos-3,
+    .pos-4,
+    .pos-5,
+    .pos-6 {
+        grid-column: auto;
+        grid-row: auto;
     }
 }
 
@@ -662,10 +690,26 @@ footer {
     .trainer {
         display: none;
     }
+    .photo {
+        display: none;
+    }
     .mailing-inner h1 {
         max-height: 64px;
         height: 64px;
     }
-
+    .advantages {
+        flex-direction: column;
+    }
+    .advantages-1,
+    .advantages-2,
+    .advantages-3,
+    .advantages-4 {
+        width: 100%;  
+        max-width: 231px;
+    }
+    .schedule-container-wrapper {
+        grid-template-columns: 1fr; /* 1 колонка */
+    }
 }
+
 
