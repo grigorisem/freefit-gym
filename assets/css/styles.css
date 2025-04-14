@@ -29,7 +29,7 @@ header {
     height: auto;
     display: flex;
     justify-content: space-between; 
-    align-items: center;  
+    align-items: center;
 }
 .logo {
     max-width: 97px;
@@ -190,6 +190,10 @@ header {
     box-shadow: 0px 13px 24px rgba(251, 241, 56, 0.3);
     display: flex;
     align-items: center;
+    transition: 0.2s;
+}
+.content-text-2 button:hover {
+    transform: translateY(-2px);
 }
 .content button h4 {
     width: 192px;
@@ -267,8 +271,11 @@ header {
     align-items: center;
     text-align: center;
     flex-direction: column;
+    transition: 0.2s;
   }
-  
+.card:hover {
+    transform: translateY(-4px);
+}
 .card span {
     margin-top: 10px;
     font-size: 14px;
@@ -378,6 +385,10 @@ form {
     letter-spacing: 0.03em;
     text-transform: uppercase;
     color: #2B3541;
+    transition: 0.2s;
+}
+#subscription:hover {
+    transform: translateY(-2px);
 }
 .personal-data {
     display: flex;
@@ -467,7 +478,12 @@ form {
     background: #FBF138;
     box-shadow: 0px 13px 24px rgba(251, 241, 56, 0.3);
     text-transform: uppercase;
+    transition: 0.2s;
 }
+.about-us-company button:hover {
+    transform: translateY(-2px);
+}
+
 .trainer {
     position: relative;
     max-width: 581px;
@@ -617,7 +633,6 @@ footer {
         max-height: 358px;
     }
     .about-us-inner-2 {
-        padding: 15px;
     }
     .advantages {
         flex-wrap: wrap;
@@ -644,7 +659,6 @@ footer {
 }
 
 @media only screen and (max-width: 360px){
-
     .trainer {
         display: none;
     }
@@ -652,5 +666,6 @@ footer {
         max-height: 64px;
         height: 64px;
     }
+
 }
 
