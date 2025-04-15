@@ -15,7 +15,7 @@ body {
 }
 header {
     max-width: 1326px;
-    width: 100%;
+    width: calc(100% - 15px);
     max-height: 30px;
     height: auto;
     margin: auto;
@@ -87,7 +87,7 @@ header {
 .screen {
     margin-top: 27px;
     max-width: 1326px;
-    width: 100%;
+    width: calc(100% - 15px);
     max-height: 852px;
     height: 852px;
     display: flex;
@@ -101,7 +101,7 @@ header {
     max-height: 385px;
     height: 385px;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     flex-direction: column;
 }
 .content-inner {
@@ -109,7 +109,8 @@ header {
     flex-direction: row;
     max-width: 632px;
     width: 100%;
-    gap: 10px;
+    max-height: 119px;
+    height: 119px;
 }   
 .content-text-1 {
     max-width: 75px;
@@ -123,10 +124,9 @@ header {
     max-width: 632px;
     width: 100%;
     max-height: 122px;
-    height: 122px;
     font-style: normal;
     font-weight: 700;
-    font-size: clamp(24.69px, 2vw, 36px);
+    font-size: clamp(24.69px, 3vw, 36px);
     line-height: 125%;
     letter-spacing: 0.03em;
     text-transform: uppercase;
@@ -140,7 +140,7 @@ header {
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 400;
-    font-size: clamp(26px, 2vw, 40px);
+    font-size: clamp(26px, 4vw, 40px);
     line-height: 125%;
     color: #2B3541;
 }
@@ -149,6 +149,9 @@ header {
     max-height: 223px;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
+    max-height: 119px;
+    height: 119px;
 }
 
 .content-text-2 h2 {
@@ -157,7 +160,7 @@ header {
     max-height: 50px;
     height: 50px;
     font-weight: 400;
-    font-size: clamp(26px, 2vw, 40px);
+    font-size: clamp(26px, 4vw, 40px);
     line-height: 125%;
     color: #2B3541;
 }
@@ -169,13 +172,19 @@ header {
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 400;
-    font-size: clamp(16px, 1vw, 18px);
+    font-size: clamp(16px, 2vw, 18px);
     line-height: 150%;
     color: #2B3541;
 }
 
-
 .content-button {
+    max-width: 252px;
+    width: 100%;
+    max-height: 64px;
+    height: 64px;
+    display: flex;
+}
+.content-button button {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -422,7 +431,7 @@ form {
 
 .about-us {
     max-width: 1142px;
-    width: 100%;
+    width: calc(100% - 15px);
     height: 513px;
     max-height: 513px;
     margin: auto;
@@ -576,7 +585,7 @@ footer {
 }
 .footer-inner {
     max-width: 1141px;
-    width: 100%;
+    width: calc(100% - 15px);
     height: auto;
     display: flex;
     justify-content: space-between;
