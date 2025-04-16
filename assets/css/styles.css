@@ -308,6 +308,8 @@ header {
     height: 348px;
     margin-top: 162px;
     background: #F3F3F3;
+    display: flex;
+    justify-content: space-between;
 }
 
 .mailing-inner {
@@ -375,7 +377,6 @@ form {
     line-height: 150%;
     color: #2B3541;
     opacity: 0.3;
-    padding-left: 19px;
 }
 
 #subscription {
@@ -532,7 +533,7 @@ form {
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 700;
-    font-size: clamp(15px, 2vw, 18px);
+    font-size: 18px;
     line-height: 125%;
     color: #2B3541;
 }
@@ -540,7 +541,7 @@ form {
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 400;
-    font-size: clamp(15px, 2vw, 18px);
+    font-size: 18px;
     line-height: 150%;
     color: #2B3541;
     opacity: 0.6;
@@ -648,7 +649,22 @@ footer {
     }
     .about-us-inner-2 {
     }
+    .mailing-inner {
+        max-height: 295px;
+        height: 295px;
+        display: flex;
+        justify-content: space-between;
+    }
+    #email {
+        max-height: 65px;
+        height: 65px;
+    }
+    #subscribe {
+        max-height: 65px;
+        height: 65px;
+    }
     .advantages {
+        flex-wrap: wrap;
         gap: 20px 0;
         max-width: 607px;   
         max-height: 209px;
@@ -662,6 +678,8 @@ footer {
         width: 50%;  
         max-width: 50%;
         box-sizing: border-box;
+        max-height: 83px;
+        height: 83px;
     }
     .footer-menu, .social {
         display: none;
@@ -706,18 +724,19 @@ footer {
         max-height: 64px;
         height: 64px;
     }
-    .advantages {
+    .schedule-container-wrapper {
+        grid-template-columns: 1fr;
+    }
+    .eclipse-2 {
+        width: 31px;
+        height: 31px;
+    }
+    form {
         flex-direction: column;
     }
-    .advantages-1,
-    .advantages-2,
-    .advantages-3,
-    .advantages-4 {
-        width: 100%;  
-        max-width: 231px;
-    }
-    .schedule-container-wrapper {
-        grid-template-columns: 1fr; /* 1 колонка */
+    #email {
+        margin-right: 0;
+        width: calc(100% - 15px);
     }
 }
 
