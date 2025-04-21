@@ -48,6 +48,24 @@ header {
     justify-content: space-between;   
     align-items: center;
 }
+.header-navbar:hover {
+    .header-navbar-underline {
+        display: block;
+    }
+}
+.header-navbar-text {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 150%;
+    color: #2B3541;
+}
+.header-navbar-underline {
+    display: none;
+    width: 100%;
+    border: 1px solid #2B3541;
+}
 .menu {
     max-width: 29px;
     width: 100%;
@@ -198,11 +216,25 @@ header {
     display: flex;
     align-items: center;
     transition: 0.2s;
+
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 150%;
+    text-align: center;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: #2B3541;
 }
 
-.content-button:hover {
+.content-button button:hover {
     transform: translateY(-2px);
+    background: #2B3541;
+    box-shadow: 0px 13px 24px rgba(70, 86, 106, 0.2);
+    color: #FBF138;
 }
+
 .content button h4 {
     width: 192px;
     height: 24px;
@@ -282,11 +314,7 @@ header {
   }
 .card:hover {
     transform: translateY(-4px);
-}
-.card span {
-    margin-top: 10px;
-    font-size: 14px;
-    color: #777;
+    background: linear-gradient(135deg, #fff9c4, #ffe082);
 }
 .card-wrapper {
     display: flex;
@@ -322,9 +350,6 @@ header {
     opacity: 0.7;
 }
 
-.card.yellow {
-    background: linear-gradient(135deg, #fff9c4, #ffe082);
-}
 .pos-1 { grid-column: 1; grid-row: 1 / span 5; }
 .pos-2 { grid-column: 2; grid-row: 1 / span 6; }
 .pos-3 { grid-column: 3; grid-row: 1 / span 5; }
@@ -401,7 +426,6 @@ form {
     margin-right: 20px;
     max-width: 372px;
     width: 100%;
-    max-height: 65px;
     height: 65px;
     background: #FFFFFF;
     font-family: 'Montserrat';
@@ -409,8 +433,17 @@ form {
     font-weight: 400;
     font-size: 18px;
     line-height: 150%;
-    color: #2B3541;
+    border: 1px solid transparent;
+    padding: 10px 15px;
+    box-sizing: border-box;
+    outline: none;
+}
+#email::placeholder {
     opacity: 0.3;
+}
+#email:focus {
+    border: 1px solid #FBF138;
+    opacity: 1;
 }
 
 #subscription {
@@ -433,6 +466,12 @@ form {
 }
 #subscription:hover {
     transform: translateY(-2px);
+    background: #2B3541;
+    box-shadow: 0px 13px 24px rgba(70, 86, 106, 0.2);
+    color: #FBF138;
+}
+#subscription:disabled {
+    cursor: not-allowed;
 }
 .personal-data {
     display: flex;
@@ -441,6 +480,14 @@ form {
     align-items: center;
     margin-top: 10px;
 }
+.personal-data-wrapper {
+    display: flex;
+    justify-content: space-between;
+    width: 288px;
+    align-items: center;
+
+}
+
 .personal-data-text {
     font-family: 'Montserrat';
     font-style: normal;
@@ -448,7 +495,7 @@ form {
     font-size: 11px;
     line-height: 150%;
     color: #2B3541;
-    opacity: 0.5;
+    color: rgba(43, 53, 65, 0.5);
 }
 .personal-data-text span {
     font-family: 'Montserrat';
@@ -458,12 +505,26 @@ form {
     line-height: 150%;
     color: #2B3541;
     text-decoration: underline;
+    color: rgba(43, 53, 65, 0.5);
+
 }
-.check-box {
-    width: 24px;
-    height: 24px;
+.personal-data-text:hover span {
+    color: rgba(43, 53, 65, 1.0);
 }
 
+
+.check-box {
+    width: 18px;
+    height: 18px;
+}
+
+.check-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    cursor: pointer;
+
+}
 .about-us {
     max-width: 1142px;
     width: calc(100% - 15px);
@@ -526,6 +587,9 @@ form {
 }
 .about-us-company button:hover {
     transform: translateY(-2px);
+    background: #2B3541;
+    box-shadow: 0px 13px 24px rgba(70, 86, 106, 0.2);
+    color: #FBF138;
 }
 
 .trainer {

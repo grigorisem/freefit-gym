@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <title>Freefit</title>
+    <title>Freefit</title> 
 </head>
 <body>
     <header>
@@ -18,9 +18,9 @@
             </div>
             <div class="menu"><img src="assets/img/burger1.png" alt="burger"></div>
             <div class="header-navbar">
-                <h1>Мероприятия</h1>
-                <h1>Расписание</h1>
-                <h1>О компании</h1>
+                <div class="header-navbar-text">Мероприятия <div class="header-navbar-underline"></div></div>
+                <div class="header-navbar-text">Расписание<div class="header-navbar-underline"></div></div>
+                <div class="header-navbar-text">О компании<div class="header-navbar-underline"></div></div>
             </div>
             <div class="info">
                 <div class="eclipse"></div>
@@ -40,7 +40,7 @@
                         <h3>в области спортивной физиологии и нутрициологии</h3>
                     </div>
             </div>
-            <div class="content-button"><button><h4>Узнать подробнее</h4></button></div>
+            <div class="content-button"><button>Узнать подробнее</button></div>
         </div>
         <div class="photo">
             <img src="assets/img/girl.png" alt="girl">
@@ -80,7 +80,7 @@
                 </div>
             </div>
     
-            <div class="card large yellow pos-4">
+            <div class="card large pos-4">
                 <div class="card-wrapper">
                     <div class="card-date">25 июня, 11:00</div>
                     <div class="card-img">
@@ -118,16 +118,18 @@
                 <div class="eclipse-2"></div>
                 <h1>Подпишитесь на рассылку </h1>
             </div>
-            <form action="/" method="POST">
-                <input type="text" id="email" name="email"  placeholder="Ваш e-mail">
-                <input type="submit" id="subscription" name="subscription"  placeholder="ПОДПИСАТЬСЯ">
+            <form action="index.html" method="POST">
+                <input type="email" id="email" name="email" required placeholder="Ваш e-mail">
+                <input type="submit" id="subscription" name="subscription" value="ПОДПИСАТЬСЯ" disabled>
             </form>
             <div class="personal-data">
-                <div class="check-box">
-                    <img src="assets/img/check-box.png" alt="check box">
-                </div>
-                <div class="personal-data-text">
-                    Согласен с обработкой <span>персональных данных</span>
+                <div class="personal-data-wrapper">
+                    <div class="check-box" id="checkbox-container">
+                        <img src="assets/img/check-box-empty.jpg" alt="check-box-empty" id="checkbox-img">
+                    </div>
+                    <div class="personal-data-text">
+                        Согласен с обработкой <a href="/"><span>персональных данных</span></a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -189,4 +191,23 @@
         </div>
     </footer>
 </body>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const checkboxImg = document.getElementById('checkbox-img');
+        const subscriptionButton = document.getElementById('subscription');
+        subscriptionButton.disabled = true;
+        checkboxImg.addEventListener('click', function() {
+            if (checkboxImg.src.includes('check-box-empty.jpg')) {
+                checkboxImg.src = 'assets/img/check-box.jpg';
+                checkboxImg.alt = 'checkbox';
+                subscriptionButton.disabled = false;
+            } else {
+                checkboxImg.src = 'assets/img/check-box-empty.jpg';
+                checkboxImg.alt = 'check box empty';
+                subscriptionButton.disabled = true;
+            }
+        });
+    });
+</script>
+
 </html>
