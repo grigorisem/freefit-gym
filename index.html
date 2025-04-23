@@ -16,12 +16,23 @@
             <div class="logo">
                 <img src="assets/img/logo.png" alt="logo">
             </div>
-            <div class="menu"><img src="assets/img/burger1.png" alt="burger"></div>
+            <div class="menu"><img src="assets/img/burger1.png" alt="burger" id="burger"></div>
             <div class="header-navbar">
                 <div class="header-navbar-text">Мероприятия <div class="header-navbar-underline"></div></div>
                 <div class="header-navbar-text">Расписание<div class="header-navbar-underline"></div></div>
                 <div class="header-navbar-text">О компании<div class="header-navbar-underline"></div></div>
             </div>
+            <nav class="mobile-menu" id="mobileMenu">
+                <div class="mobile-menu-navbar">
+                    <div class="logo"><img src="assets/img/logo.png" alt="logo"></div>
+                    <div class="close-btn" id="closeBurger">&times;</div>
+                </div>
+                <div class="mobile-menu-inner">
+                    <a href="#">Мероприятия</a>
+                    <a href="#">Расписание</a>
+                    <a href="#">О компании</a>
+                </div>
+            </nav>
             <div class="info">
                 <div class="eclipse"></div>
                 <h1>info@freefit.com</h1>
@@ -207,6 +218,22 @@
                 subscriptionButton.disabled = true;
             }
         });
+    });
+    const burger = document.getElementById('burger');
+    const mobileMenu = document.getElementById('mobileMenu');
+    const closeBurger = document.getElementById('closeBurger');
+
+    burger.addEventListener('click', () => {
+        mobileMenu.style.display = 'block';
+    });
+
+    closeBurger.addEventListener('click', () => {
+        mobileMenu.style.display = 'none';
+    });
+    window.addEventListener('click', (e) => {
+        if (e.target === mobileMenu) {
+            mobileMenu.style.display = 'none';
+        }
     });
 </script>
 
